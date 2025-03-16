@@ -1,0 +1,27 @@
+.navBarContainer {
+    display: flex;
+    border-radius: 5px;
+    box-shadow: #b8b6b6 5px 5px 5px;
+    border: 1px solid gray;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+}
+
+.linkDecoration{
+    text-decoration: none;
+}
+
+.navBarButton {
+    font-family: sans-serif;
+}
+
+@keyframes navBarHover {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
