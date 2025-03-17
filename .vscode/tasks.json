@@ -3,14 +3,6 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "start",
-			"path": "frontend",
-			"problemMatcher": [],
-			"label": "npm: start - frontend",
-			"detail": "next start"
-		},
-		{
-			"type": "npm",
 			"script": "dev",
 			"path": "frontend",
 			"problemMatcher": [],
