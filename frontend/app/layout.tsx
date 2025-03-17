@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar, { Tab } from "./components/NavBar/NavBar";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -22,7 +11,7 @@ const tabs: Tab[] = [
     { name: "Tumour Types", link: "new-page" },
     { name: "Diagnose", link: "new-page" },
     { name: "Your Images", link: "new-page"},
-    { name: "Our Story", link: "new-page"}
+    { name: "Our Story", link: "new-pasge"}
 ];
 
 export default function RootLayout({
@@ -33,7 +22,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} page-with-padding`}
+                className={`page-with-padding`}
             >
                 <NavBar
                     tabs={tabs}
