@@ -8,20 +8,31 @@
     justify-content: center;
 }
 
-.linkDecoration{
-    text-decoration: none;
-}
-
 .navBarButton {
     font-family: sans-serif;
 }
 
-@keyframes navBarHover {
-    0% {
-        transform: translateY(0px);
-    }
+.navBarButton:hover {
+    animation: navBarHover 0.3s ease-in-out forwards;
+}
 
-    100% {
-        transform: translateY(10px);
-    }
+.linkDecoration {
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.linkDecoration::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.linkDecoration:hover::after {
+    width: 100%;
 }

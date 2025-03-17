@@ -3,17 +3,22 @@ import Link from "next/link";
 
 import styles from './NavBar.module.css'
 
+export type Tab = {
+    name: string;
+    link: string;
+};  
+
 type NavBarProps = {
-    tabs: string[];
+    tabs: Tab[];
 };
 
 const NavBar = ({ tabs }: NavBarProps): JSX.Element => {
     function renderTabs() {
         return (
             <>
-                {tabs.map((value: string, index: number) => (
+                {tabs.map((value: Tab, index: number) => (
                     <p key={index} className={styles['navBarButton']}>
-                        <Link href="" className={styles['linkDecoration']}>{value}</Link>
+                        <Link href={value.link} className={styles['linkDecoration']}>{value.name}</Link>
                     </p>
                 ))}
             </>
